@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="style.css" rel="stylesheet" >
+    <title>Home | DigitalClock</title>
+</head>
+<body>
+        
+    <div class="container">
+        <div id="HH" class="box boxhover1">00</div>
+        <div class="boxgap" ><h1>:</h1></div> 
+        <div id="MM" class="box boxhover2">00</div> 
+        <div class="boxgap"><h1>:</h1></div> 
+        <div id="SS" class="box boxhover3">00</div>
+    </div>
+
+    <script>
+        function clock(){
+
+        const hh= document.getElementById("HH");
+        const mm= document.getElementById("MM");
+        const ss= document.getElementById("SS");
+
+
+        const Hour=new Date().getHours();
+        const Min=new Date().getMinutes();
+        const Sec=new Date().getSeconds();
+        
+   
+        hh.innerHTML=Hour;
+        mm.innerHTML=Min;
+        ss.innerHTML=Sec;
+        }
+        setInterval(clock,1000)
+    </script>
+</body>
+</html>
